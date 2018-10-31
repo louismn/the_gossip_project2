@@ -1,0 +1,9 @@
+<h1>veuillez remplir le formulaire pour rajouter un Gossip</h1>
+
+ <div class="form-group">
+<%= form_for @gossip, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+ Titre :<%= f.text_field :title, class: "form-control" %><br />
+ Contenu: <%= f.text_field :content, size: "40x3", class: "form-control" %><br />
+ <%= f.submit "Create", class: "btn btn-primary" %>
+<% end %>
+</div>

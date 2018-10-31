@@ -1,0 +1,54 @@
+<h1>Les gossips</h1>
+<p>Voici tous les gossips</p>
+
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<td>Title</td>
+			<td>Content</td>
+			<td>Author</td>
+		</tr>
+	</thead>
+
+<tbody>
+	
+<% @gossips.each do |gossip| %>
+
+<tr>
+	<td><%= gossip.title %></td>
+	<td><%= gossip.content %></td>
+	<td><%= gossip.anonymous_gossiper %></td>
+	<td>
+
+		<a href="<%= edit_gossip_path(gossip.id) %>" class="btn btn-primary">Editer</a>
+			
+
+		</td>
+
+</tr>
+
+<% end %>
+
+</tbody>
+
+</table>
+
+<p>
+	<a href="<%= new_gossip_path %>" class="btn btn-success">Créer un nouveau gossip</a>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+<td></td>
